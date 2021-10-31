@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools"
+    >
+
+
+    <data>
+        <variable
+            name="updateIletisimList"
+            type="com.example.mvvmdemoproject.domain.model.Deneme" />
+    </data>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#939292">
+
+        <LinearLayout
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/popup"
+            android:layout_gravity="center"
+            >
+
+            <ScrollView
+                android:layout_width="380dp"
+                android:layout_height="380dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/root_layoutiletisim"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+            </ScrollView>
+
+            <Button
+                android:id="@+id/iletisim_guncelle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:background="@color/colorPrimary"
+                android:text="Guncelle" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:id="@+id/iletisim_ekle"
+                android:text="Ekle"
+                android:layout_marginLeft="300dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

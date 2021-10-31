@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_etkinlik_listesi"
+    app:startDestination="@id/girisYapFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.example.mvvmdemoproject.presentation.main.view.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/action_anasayfaFragment_to_kampusSayfaFragment"
+            app:destination="@id/kampusSayfaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kampusSayfaFragment"
+        android:name="com.example.mvvmdemoproject.presentation.main.view.KampusSayfaFragment"
+        android:label="fragment_kampus_sayfa"
+        tools:layout="@layout/fragment_kampus_sayfa" >
+        <action
+            android:id="@+id/action_kampusSayfaFragment_to_etkinlikListelemeFragment"
+            app:destination="@id/etkinlikListelemeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/etkinlikListelemeFragment"
+        android:name="com.example.mvvmdemoproject.presentation.main.view.EtkinlikListelemeFragment"
+        android:label="fragment_etkinlik_listeleme"
+        tools:layout="@layout/fragment_etkinlik_listeleme" >
+        <action
+            android:id="@+id/action_etkinlikListelemeFragment_to_etkinlikDetayFragment"
+            app:destination="@id/etkinlikDetayFragment" />
+        <action
+            android:id="@+id/action_etkinlikListelemeFragment_to_etkinlikFiltrelemeFragment"
+            app:destination="@id/etkinlikFiltrelemeFragment" />
+        <action
+            android:id="@+id/action_etkinlikListelemeFragment_to_etkinlikSiralamaFragment"
+            app:destination="@id/etkinlikSiralamaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/etkinlikDetayFragment"
+        android:name="com.example.mvvmdemoproject.presentation.main.view.EtkinlikDetayFragment"
+        android:label="fragment_etkinlik_detay"
+        tools:layout="@layout/fragment_etkinlik_detay" >
+        <action
+            android:id="@+id/action_etkinlikDetayFragment_to_etkinlikListelemeFragment"
+            app:destination="@id/etkinlikListelemeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/etkinlikFiltrelemeFragment"
+        android:name="com.example.mvvmdemoproject.presentation.main.view.EtkinlikFiltrelemeFragment"
+        android:label="fragment_etkinlik_filtreleme"
+        tools:layout="@layout/fragment_etkinlik_filtreleme" >
+        <action
+            android:id="@+id/action_etkinlikFiltrelemeFragment_to_etkinlikListelemeFragment"
+            app:destination="@id/etkinlikListelemeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/etkinlikSiralamaFragment"
+        android:name="com.example.mvvmdemoproject.presentation.main.view.EtkinlikSiralamaFragment"
+        android:label="fragment_etkinlik_siralama"
+        tools:layout="@layout/fragment_etkinlik_siralama" >
+        <action
+            android:id="@+id/action_etkinlikSiralamaFragment_to_etkinlikListelemeFragment"
+            app:destination="@id/etkinlikListelemeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kayitOlFragment"
+        android:name="com.example.mvvmdemoproject.presentation.main.view.KayitOlFragment"
+        android:label="fragment_kayit_ol"
+        tools:layout="@layout/fragment_kayit_ol" >
+        <action
+            android:id="@+id/action_kayitOlFragment_to_girisYapFragment"
+            app:destination="@id/girisYapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/girisYapFragment"
+        android:name="com.example.mvvmdemoproject.presentation.main.view.GirisYapFragment"
+        android:label="fragment_giris_yap"
+        tools:layout="@layout/fragment_giris_yap" >
+        <action
+            android:id="@+id/action_girisYapFragment_to_sifremiUnuttumFragment"
+            app:destination="@id/sifremiUnuttumFragment" />
+        <action
+            android:id="@+id/action_girisYapFragment_to_anasayfaFragment"
+            app:destination="@id/anasayfaFragment" />
+        <action
+            android:id="@+id/action_girisYapFragment_to_kayitOlFragment"
+            app:destination="@id/kayitOlFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sifremiUnuttumFragment"
+        android:name="com.example.mvvmdemoproject.presentation.main.view.SifremiUnuttumFragment"
+        android:label="fragment_sifremi_unuttum"
+        tools:layout="@layout/fragment_sifremi_unuttum" >
+        <action
+            android:id="@+id/action_sifremiUnuttumFragment_to_girisYapFragment"
+            app:destination="@id/girisYapFragment" />
+    </fragment>
+</navigation>

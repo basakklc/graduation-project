@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/layout_background">
+
+        <include layout="@layout/toolbar" android:id="@+id/listeleme_toolbar"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/result"
+            android:background="@color/colorPrimary">
+        </TextView>
+
+    <ImageButton
+        android:id="@+id/btn_etkinlikOlusturma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_arti"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="70dp"
+        android:layout_marginEnd="40dp"
+        android:text="Etkinlik Olustur" />
+    <Button
+        android:id="@+id/btn_etkinlikDetay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="70dp"
+        android:layout_marginEnd="40dp"
+        android:text="Etkinlik Olustur" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcylr_etkinlikler"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="50dp"
+        android:padding="5dp"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

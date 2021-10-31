@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/layout_background"
+    tools:context=".presentation.main.view.SifremiUnuttumFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/radius"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Şifremi Unuttum"
+            android:layout_marginLeft="89dp"
+            android:layout_marginTop="65dp"
+            android:textColor="@color/toolbarTitleText"
+            android:textSize="22sp"
+            android:fontFamily="@font/semibold"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="20dp"
+        android:paddingTop="45dp"
+        android:paddingBottom="45dp"
+        android:id="@+id/layout_giris_formu"
+        android:background="@drawable/raw_item_radius"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <EditText
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Email" />
+
+        <EditText
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"
+            android:id="@+id/et_sifre"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Şifre" />
+
+        <EditText
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"
+            android:id="@+id/et_sifre_tekrar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Şifre Tekrar" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="370dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_radius"
+        android:text="Yenile"
+        android:id="@+id/btn_sifre_yenile"
+        android:textSize="@dimen/subtitle_size"
+        android:textColor="@color/toolbarTitleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_giris_formu"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

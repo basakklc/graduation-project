@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mvvmdemoproject">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".presentation.main.view.EtkinlikGuncellemeActivity"/>
+        <activity android:name=".presentation.base.EklemeActivity" />
+        <activity android:name=".presentation.main.view.EtkinlikFiltrelemeActivity" />
+        <activity android:name=".presentation.main.view.EtkinlikSilmeActivity" />
+        <activity android:name=".presentation.main.view.EtkinlikGoruntulemeActivity" />
+        <activity android:name=".presentation.main.view.EtkinlikOlusturmaActivity" />
+        <activity android:name= ".presentation.base.MainActivity"/>
+        <activity android:name= "presentation.main.view.EtkinlikListelemeActivity"/>
+        <activity android:name=".presentation.base.ListelemeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

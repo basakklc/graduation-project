@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+    <variable
+        name="etkinlik"
+        type="com.example.mvvmdemoproject.domain.model.EtkinlikListelemeResponse"/>
+</data>
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:cardCornerRadius="40dp"
+        app:cardBackgroundColor="@color/layout_background"
+        android:layout_margin="15dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img_etkinlik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="52dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/etkinlik" />
+
+            <TextView
+                android:id="@+id/tv_baslik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="@dimen/text_margin_top_bottom"
+                android:text="@{etkinlik.etkinlikAdi}"
+                android:textSize="@dimen/text_mediumsize"
+                app:layout_constraintStart_toStartOf="@id/ic_konum"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/ic_takvim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="155sp"
+                android:layout_marginTop="52dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/ic_takvim" />
+
+            <TextView
+                android:id="@+id/tv_tarih"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="53dp"
+                android:layout_marginLeft="@dimen/text_margin_left"
+                android:text="@{etkinlik.etkinlikTarihi}"
+                android:textSize="@dimen/text_smallsize"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/img_etkinlik"
+                />
+
+            <TextView
+                android:id="@+id/tv_goruntuleme_sayisi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="106dp"
+                android:layout_marginRight="23dp"
+                android:hint="120"
+                android:textSize="@dimen/title_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_ucret"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/text_margin_left"
+                android:layout_marginTop="@dimen/text_margin_top_bottom"
+                android:textSize="@dimen/text_smallsize"
+                android:text="@{etkinlik.ucret.toString()}"
+                app:layout_constraintStart_toEndOf="@id/img_etkinlik"
+                app:layout_constraintTop_toBottomOf="@+id/tv_konum" />
+
+            <TextView
+                android:id="@+id/tv_konum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/text_margin_left"
+                android:layout_marginTop="@dimen/text_margin_top_bottom"
+                android:textSize="@dimen/text_smallsize"
+                android:text="@{etkinlik.ilceAdi+etkinlik.semtAdi+etkinlik.acikAdres}"
+                app:layout_constraintStart_toEndOf="@id/img_etkinlik"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tarih" />
+
+            <ImageView
+                android:id="@+id/ic_konum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="153sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ic_takvim"
+                android:layout_marginTop="@dimen/icon_margin_top"
+                android:background="@drawable/ic_konum" />
+
+            <ImageView
+                android:id="@+id/ic_goruntuleme_sayisi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="147dp"
+                android:layout_marginTop="114dp"
+                android:background="@drawable/ic_goruntuleme"
+                app:layout_constraintStart_toEndOf="@id/ic_ucret"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ic_ucret"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="158sp"
+                android:layout_marginTop="@dimen/icon_margin_top"
+                android:background="@drawable/ic_ucret"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ic_konum" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="etkinlikGoruntuleme"
+            type="com.example.mvvmdemoproject.domain.model.EtkinlikGoruntulemeResponse"/>
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/layout_background">
+
+
+
+        <include layout="@layout/toolbar" android:id="@+id/goruntuleme_toolbar"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text">
+        </TextView>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/activity_etkinlik_goruntuleme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="15dp">
+
+                <Button
+                    android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"                 android:id="@+id/btndn"
+                android:background="@color/colorPrimary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="dön"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="150dp"
+                    android:layout_height="wrap_content"                 android:id="@+id/btn_etkinlikGuncelleme"
+                    android:background="@color/colorPrimary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="Guncele"/>
+
+                <ImageView
+                    android:id="@+id/img_detay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="202dp"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/etkinlik_detay"/>
+
+                <TextView
+                    android:id="@+id/tv_etkinlik_adi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/img_detay"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="@{etkinlikGoruntuleme.etkinlik.etkinlik_adi}"
+                    android:textColor="@color/itemTitleText"
+                    android:textSize="@dimen/title_size"
+                    android:fontFamily="@font/semibold" />
+
+
+                <TextView
+                    android:id="@+id/tv_topluluklar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/tv_etkinlik_adi"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="@{etkinlikGoruntuleme.etkinlikToplulugu.toString()}"
+                    android:textColor="@color/itemSubTitleText"
+                    android:textSize="@dimen/subtitle_size"
+                    android:fontFamily="@font/semibold" />
+
+
+                <TextView
+                    android:id="@+id/tv_kapsamlar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/tv_topluluklar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="@{etkinlikGoruntuleme.etkinlikKapsami.toString()}"
+                    android:textColor="@color/itemSubTitleText"
+                    android:textSize="@dimen/subtitle_size"
+                    android:fontFamily="@font/semibold" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/layout_etkinlik_bilgi"
+                    android:background="@drawable/raw_item_radius"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="18dp"
+                    app:layout_constraintTop_toBottomOf="@id/tv_kapsamlar"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <ImageView
+                        android:id="@+id/ic_takvim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="25dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:background="@drawable/ic_takvim" />
+
+                    <TextView
+                        android:id="@+id/tv_tarih"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginLeft="18.5dp"
+                        android:text="@{etkinlikGoruntuleme.etkinlik.etkinlik_tarihi}"
+                        android:textSize="@dimen/text_mediumsize"
+                        android:fontFamily="@font/medium"
+                        android:textColor="@color/itemSubTitleText"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ic_takvim"/>
+
+                    <TextView
+                        android:id="@+id/tv_konum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="@dimen/text_margin_top_bottom"
+                        android:textSize="@dimen/text_mediumsize"
+                        android:fontFamily="@font/medium"
+                        android:textColor="@color/itemSubTitleText"
+                        android:text="@{etkinlikGoruntuleme.ilce+etkinlikGoruntuleme.semt+etkinlikGoruntuleme.acikAdres}"
+                        app:layout_constraintStart_toEndOf="@id/ic_konum"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_tarih" />
+
+                    <ImageView
+                        android:id="@+id/ic_konum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ic_takvim"
+
+                        android:background="@drawable/ic_konum" />
+
+                    <ImageView
+                        android:id="@+id/ic_ucret"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="19dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/ic_ucret"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ic_konum" />
+
+                    <TextView
+                        android:id="@+id/tv_ucret"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="19.5dp"
+                        android:layout_marginTop="@dimen/text_margin_top_bottom"
+                        android:textSize="@dimen/text_mediumsize"
+                        android:fontFamily="@font/medium"
+                        android:textColor="@color/itemSubTitleText"
+                        android:text="@{etkinlikGoruntuleme.etkinlik.ucret.toString()}"
+                        app:layout_constraintStart_toEndOf="@id/ic_ucret"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_konum" />
+
+
+                    <ImageView
+                        android:id="@+id/ic_kisi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="250dp"
+                        android:layout_marginTop="95dp"
+                        android:background="@drawable/ic_bakanlar"
+                        app:layout_constraintStart_toEndOf="@+id/ic_ucret"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/tv_goruntuleme_sayisi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="90dp"
+                        android:layout_marginRight="23dp"
+                        android:text="120"
+                        android:textSize="@dimen/title_size"
+                        android:fontFamily="@font/semibold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_katilimcilar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_mediumsize"
+                    android:fontFamily="@font/medium"
+                    android:text="@{etkinlikGoruntuleme.konusmaciAdi.toString()}"
+                    android:background="@drawable/raw_item_radius"
+                    app:layout_constraintTop_toBottomOf="@id/layout_etkinlik_bilgi"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:padding="15dp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_aciklama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_mediumsize"
+                    android:fontFamily="@font/medium"
+                    android:text="@{etkinlikGoruntuleme.etkinlik.aciklama}"
+                    android:background="@drawable/raw_item_radius"
+                    app:layout_constraintTop_toBottomOf="@id/tv_katilimcilar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:padding="15dp">
+
+                </TextView>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/etkinlikIletisim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/raw_item_radius"
+                    android:paddingBottom="18dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_aciklama">
+
+                    <ImageView
+                        android:id="@+id/iciletisim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/ic_iletisim_adres"
+
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tviletisimadresleri"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/raw_item_radius"
+                        android:fontFamily="@font/medium"
+                        android:text="@{etkinlikGoruntuleme.iletisimAdresi.toString()}"
+                        android:textSize="@dimen/text_mediumsize"
+                        app:layout_constraintStart_toEndOf="@id/iciletisim"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </TextView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

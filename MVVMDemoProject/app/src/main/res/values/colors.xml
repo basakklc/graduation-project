@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#8A56AC</color>
+    <color name="colorAccent">#FFA717</color>
+    <color name="layout_background">#DFE3E1E1</color>
+    <color name="item_background">#FFFFFF</color>
+
+    <color name="formItemHintText">#606A7B</color>
+    <color name="toolbarTitleText">#FFFFFF</color>
+    <color name="itemTitleText">#2D3245</color>
+    <color name="itemSubTitleText">#707070</color>
+    <color name="textColor">#606A7B</color>
+
+</resources>

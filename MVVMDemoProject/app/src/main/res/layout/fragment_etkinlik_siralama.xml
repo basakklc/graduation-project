@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="siralama"
+            type="com.example.mvvmdemoproject.domain.model.Deneme"/>
+    </data>
+
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context=".presentation.main.view.EtkinlikSiralamaFragment">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="UYGULA"
+                    android:id="@+id/btnsirala"/>
+
+
+                <ListView
+                    android:id="@+id/lv_siralama"
+                    android:layout_marginLeft="20dp"
+                    android:choiceMode="multipleChoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
+            </LinearLayout>
+</layout>

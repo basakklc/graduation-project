@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="kapsamlar">
+        <item>Kapsamlar</item>
+        <item> Spor </item>
+        <item> Tarih </item>
+        <item> Teknoloji </item>
+        <item> Biyoloji </item>
+        <item> Müzik </item>
+        <item> Kültür-Sanat </item>
+        <item> Gezi </item>
+        <item> Dil </item>
+        <item> Çevre </item>
+        <item> Sosyal Faaliyetler </item>
+        <item> Strateji-Zeka </item>
+        <item> Sağlık </item>
+        <item> Diğer </item>
+
+    </string-array>
+
+    <string-array name="topluluklar">
+        <item>Topluluklar</item>
+        <item> Aikido </item>
+        <item> Arkeoloji </item>
+        <item> Bilgisayar ve Teknoloji  </item>
+        <item> Bisiklet </item>
+        <item> Biyoteknoloji Gen Bilimleri </item>
+        <item> Caz  </item>
+        <item> ÇASAD </item>
+        <item> Dağcılık </item>
+        <item> Erasmus </item>
+        <item> TEMA </item>
+        <item> Havacılık </item>
+        <item> Moleküler Biyoloji ve Genetik </item>
+        <item> LÖSEV </item>
+        <item> Rüzgar Sörfü  </item>
+        <item> Satranç</item>
+        <item> Tiyatro</item>
+        <item> TOG</item>
+        <item> Kariyer ve Yaşam </item>
+        <item> Yabancı Diller </item>
+        <item> Gıda  </item>
+    </string-array>
+
+    <string-array name="ilceler">
+        <item>İlçeler</item>
+        <item> Merkez </item>
+        <item> Biga </item>
+        <item> Çan </item>
+        <item> Ayvacık </item>
+        <item> Ezine </item>
+        <item> Bayramiç </item>
+        <item> Gelibolu </item>
+        <item> Gökçeada </item>
+        <item> Yenice </item>
+    </string-array>
+
+    <string-array name="semtler">
+        <item> Barbaros </item>
+        <item> Cevatpaşa </item>
+        <item> İntepe </item>
+        <item> Kepez </item>
+        <item> Kirazlı </item>
+        <item> Merkez-Köyler </item>
+        <item> Merkez-Merkez </item>
+        <item> Bakacak </item>
+        <item> Biga-Merkez </item>
+        <item> Gümüşçay </item>
+        <item> Gündoğdu </item>
+        <item> Karabiga </item>
+        <item> Biga-Köyler </item>
+        <item> Sinekçi </item>
+        <item> Çan-Merkez </item>
+        <item> Etili </item>
+        <item> Çan-Köyler </item>
+        <item> Terzialan </item>
+        <item> Ayvacık-Merkez </item>
+        <item> Gülpınar </item>
+        <item> Ayvacık-Köyler </item>
+        <item> Küçükkuyu </item>
+        <item> Ezine-Merkez </item>
+        <item> Geyikli </item>
+        <item> Ezine-Köyler </item>
+        <item> Mahmudiye </item>
+        <item> Bayramiç-Merkez </item>
+        <item> Evciler </item>
+        <item> Bayramiç-Köyler </item>
+        <item> Yiğitler </item>
+        <item> Bolayır </item>
+        <item> Evreşe </item>
+        <item> Gelibolu-Merkez </item>
+        <item>Gelibolu-Köyler</item>
+        <item>Gökçeada-Merkez</item>
+        <item>Gökçeada-Köyler</item>
+        <item>Hamdibey</item>
+        <item>Kalkım</item>
+        <item>Yenice-Köyler</item>
+        <item>Pazarköy</item>
+        <item>Yenice-Merkez</item>
+
+    </string-array>
+
+    <string-array name="siralama">
+        <item> Ücrete Göre Artan </item>
+        <item> Ücrete Göre Azalan </item>
+        <item> Tarihe Göre Yeni </item>
+        <item> Tarihe Göre Eski </item>
+    </string-array>
+
+
+
+
+</resources>

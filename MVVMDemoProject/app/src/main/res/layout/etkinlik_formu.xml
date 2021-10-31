@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:id="@+id/spn_kapsamlar"
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:background="@drawable/form_item"
+            android:dropDownVerticalOffset="0dp"
+            android:entries="@array/kapsamlar"
+            android:popupBackground="@drawable/popup"
+            android:spinnerMode="dropdown"  />
+
+        <ImageView
+            android:layout_width="21dp"
+            android:layout_height="22dp"
+            android:layout_alignEnd="@id/spn_kapsamlar"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="26dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/ic_spinner"
+            android:layout_alignRight="@id/spn_kapsamlar" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <Spinner
+            android:id="@+id/spn_topluluklar"
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:background="@drawable/form_item"
+            android:dropDownVerticalOffset="0dp"
+            android:entries="@array/topluluklar"
+            android:popupBackground="@drawable/popup"
+            android:spinnerMode="dropdown"  />
+
+        <ImageView
+            android:layout_width="21dp"
+            android:layout_height="22dp"
+            android:layout_alignEnd="@id/spn_topluluklar"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="26dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/ic_spinner"
+            android:layout_alignRight="@id/spn_topluluklar" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <EditText
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:id="@+id/et_etkinlik_adi"
+            android:background="@drawable/form_item"
+            android:hint="@string/etkinlik_ad"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:id="@+id/texttt"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="42dp"
+            >
+
+            <Spinner
+                android:id="@+id/spn_ilceler"
+                android:layout_width="169.5dp"
+                android:layout_height="40dp"
+                android:background="@drawable/form_item_medium"
+                android:dropDownVerticalOffset="0dp"
+                android:entries="@array/ilceler"
+                android:popupBackground="@drawable/popup"
+                android:spinnerMode="dropdown" />
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="22dp"
+                android:layout_alignEnd="@id/spn_ilceler"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="26dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/ic_spinner"
+                android:layout_alignRight="@id/spn_ilceler" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/spn_semtler"
+                android:layout_width="169.5dp"
+                android:layout_height="40dp"
+                android:background="@drawable/form_item_medium"
+                android:dropDownVerticalOffset="0dp"
+                android:entries="@array/semtler"
+                android:popupBackground="@drawable/popup"
+                android:spinnerMode="dropdown" />
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="22dp"
+                android:layout_alignEnd="@id/spn_semtler"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="26dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/ic_spinner"
+                android:layout_alignRight="@id/spn_semtler" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <EditText
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:background="@drawable/form_item"
+            android:hint="Açık Adres"
+            android:id="@+id/et_acik_adres"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp" />
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="-3dp"
+        android:orientation="horizontal"
+        >
+
+        <EditText
+            android:layout_width="165dp"
+            android:layout_height="40dp"
+            android:hint="Konusmaci Adı"
+            android:id="@+id/et_konusmaci_adi"
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/subtitle_size"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp" />
+
+
+        <EditText
+            android:layout_width="163dp"
+            android:layout_height="40dp"
+            android:hint="Konusmacı Soyadı"
+            android:id="@+id/et_konusmaci_soyadi"
+            android:background="@drawable/form_item"
+            android:layout_marginLeft="10dp"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/subtitle_size"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ic_konusmaci_arti"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_arti"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/root_konusmaci_layout"
+            android:orientation="vertical"/>
+
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <EditText
+            android:layout_width="380dp"
+            android:id="@+id/et_aciklama"
+            android:layout_height="40dp"
+            android:background="@drawable/form_item"
+            android:hint="Açıklama"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <EditText
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:background="@drawable/form_item"
+            android:hint="Ücret"
+            android:id="@+id/et_ucret"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+
+        <EditText
+            android:layout_width="325dp"
+            android:layout_height="40dp"
+            android:hint="İletişim Adresleri"
+            android:id="@+id/et_iletisim_adresleri"
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ic_iletisim_arti"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_arti"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/root_iletisim_layout"
+            android:orientation="vertical"/>
+
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <EditText
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:hint="Etkinlik Tarihi"
+            android:id="@+id/et_tarih"
+            android:inputType="date"
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp" />
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="380dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/btn_yayinla"
+        android:textColor="@color/toolbarTitleText"
+        android:textSize="@dimen/text_mediumsize"
+        android:fontFamily="@font/semibold"
+        android:text="YAYINLA"
+        android:background="@drawable/button">
+
+    </Button>
+
+
+</LinearLayout>

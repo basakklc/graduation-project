@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <data>
+        <variable
+            name="bindingEklemeForm"
+            type="com.example.mvvmdemoproject.domain.model.EtkinlikGoruntulemeResponse"/>
+    </data>
+
+
+
+
+    <LinearLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:bind="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:hint=" Etkinlik kapsamı seçin."
+            android:id="@+id/tv_kapsamAdi"
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"/>
+        <TextView
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:hint=" Topluluğunuzu seçin."
+            android:id="@+id/tv_toplulukAdi"
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"/>
+        <TextView
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:hint=" Ilçenizi seçin."
+            android:id="@+id/tvilceAdi"
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"/>
+        <TextView
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:hint=" Semtinizi seçin."
+            android:id="@+id/tv_semtAdi"
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"/>
+        <EditText
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:hint=" Açık adresiniz. "
+            android:id="@+id/tv_acik_adres"
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"/>
+        <TextView
+            android:id="@+id/tv_konusmacilar"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/form_item"
+            android:fontFamily="@font/regular"
+            android:hint=" Konusmacilarinız ( Her konuşmacıdan sonra virgül koymalısınız)"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/textColor"
+            android:textColorHint="@color/textColor"
+            android:textSize="@dimen/subtitle_size"
+    />
+        <EditText
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:hint=" Etkinlik adınız "
+            android:id="@+id/tv_ad"
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"/>
+        <EditText
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:hint=" Etkinlik açıklamanız "
+            android:id="@+id/tv_aciklama"
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"/>
+        <EditText
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:hint=" Etkinlik ücretiniz "
+            android:id="@+id/tv_ucret"
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"/>
+        <EditText
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:hint=" Etkinlik tarihiniz "
+            android:id="@+id/tv_tarih"
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"/>
+        <EditText
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:hint=" Iletisim adresiniz ( Her iletişim adresinden sonra virgün koymalısınız)"
+            android:clickable="true"
+            android:id="@+id/tviletisim_adresi"
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_ekle"
+            android:text="EKLE" />
+
+
+
+    </LinearLayout>
+
+</layout>
+
+
+

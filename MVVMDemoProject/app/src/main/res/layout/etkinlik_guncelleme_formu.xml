@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+
+    <data>
+        <variable
+            name="bindingGuncellemeForm"
+            type="com.example.mvvmdemoproject.domain.model.EtkinlikGoruntulemeResponse" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:hint=" Etkinlik kapsamı seçin."
+            android:id="@+id/tv_kapsamAdi"
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:text="@{bindingGuncellemeForm.etkinlikKapsami}"
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"/>
+        <TextView
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:hint=" Topluluğunuzu seçin."
+            android:id="@+id/tv_toplulukAdi"
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:text="@{bindingGuncellemeForm.etkinlikToplulugu.toString()}"
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"/>
+        <TextView
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:hint=" Ilçenizi seçin."
+            android:id="@+id/tvilceAdi"
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:text="@{bindingGuncellemeForm.ilce}"
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"/>
+        <TextView
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:hint=" Semtinizi seçin."
+            android:id="@+id/tv_semtAdi"
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:text="@{bindingGuncellemeForm.semt}"
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"/>
+        <EditText
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:hint=" Açık adresiniz. "
+            android:id="@+id/tv_acik_adres"
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:text="@{bindingGuncellemeForm.acikAdres}"
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"/>
+        <TextView
+            android:id="@+id/tv_konusmacilar"
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:background="@drawable/form_item"
+            android:fontFamily="@font/regular"
+            android:hint=" Konusmacilarinız"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/textColor"
+            android:textColorHint="@color/textColor"
+            android:textSize="@dimen/subtitle_size"
+            android:text="@{bindingGuncellemeForm.konusmaciAdi.toString()}"/>
+        <EditText
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:hint=" Etkinlik adınız "
+            android:id="@+id/tv_ad"
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:text="@{bindingGuncellemeForm.etkinlik.etkinlik_adi}"
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"/>
+        <EditText
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:hint=" Etkinlik açıklamanız "
+            android:id="@+id/tv_aciklama"
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:text="@{bindingGuncellemeForm.etkinlik.aciklama}"
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"/>
+        <EditText
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:hint=" Etkinlik ücretiniz "
+            android:id="@+id/tv_ucret"
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:text="@{bindingGuncellemeForm.etkinlik.ucret.toString()}"
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"/>
+        <EditText
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:hint=" Etkinlik tarihiniz "
+            android:id="@+id/tv_tarih"
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:text="@{bindingGuncellemeForm.etkinlik.etkinlik_tarihi}"
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"/>
+        <TextView
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:hint=" Iletisim adresiniz "
+            android:clickable="true"
+            android:id="@+id/tviletisim_adresi"
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:text="@{bindingGuncellemeForm.iletisimAdresi.toString()}"
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guncelle"
+            android:text="guncelle" />
+
+
+    <LinearLayout
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="-3dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_konusmacilari"
+            android:layout_width="360dp"
+            android:layout_height="40dp"
+            android:background="@drawable/form_item"
+            android:fontFamily="@font/regular"
+            android:hint=" Konusmaci Adlarınız"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/textColor"
+            android:textColorHint="@color/textColor"
+            android:textSize="@dimen/subtitle_size"
+            android:text="@{bindingGuncellemeForm.konusmaciAdi.toString()}"/>
+
+
+        <ImageButton
+            android:id="@+id/i_konusmaci_arti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_arti" />
+
+
+    </LinearLayout>
+
+
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="380dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/root_layout_konusmaci"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!--
+     *************************************************************************************************************************************************************-->
+
+
+
+    <LinearLayout
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="-3dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="360dp"
+            android:layout_height="40dp"
+            android:id="@+id/tv_konusmaci"
+            android:background="@drawable/form_item"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/subtitle_size"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingTop="9dp"
+            android:paddingBottom="8dp"/>
+
+        <ImageButton
+            android:id="@+id/konusmaci_arti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            android:background="@drawable/ic_arti" />
+
+    </LinearLayout>
+
+        <!-- konusmaci ad-soyad -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="-3dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="165dp"
+                android:layout_height="40dp"
+                android:hint="Konusmaci Adı"
+                android:id="@+id/et_konusmaci_adi"
+                android:background="@drawable/form_item"
+                android:textColorHint="@color/textColor"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/subtitle_size"
+                android:paddingLeft="@dimen/text_margin"
+                android:paddingTop="9dp"
+                android:paddingBottom="8dp" />
+
+
+            <EditText
+                android:layout_width="163dp"
+                android:layout_height="40dp"
+                android:hint="Konusmacı Soyadı"
+                android:id="@+id/et_konusmaci_soyadi"
+                android:background="@drawable/form_item"
+                android:layout_marginLeft="10dp"
+                android:textColorHint="@color/textColor"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/subtitle_size"
+                android:paddingLeft="@dimen/text_margin"
+                android:paddingTop="9dp"
+                android:paddingBottom="8dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ic_konusmaci_arti"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ic_arti"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/root_konusmaci_layout"
+                android:orientation="vertical"/>
+
+
+        </ScrollView>
+
+
+
+
+<!--***************************************************************************************************************************************************************************************-->
+
+
+        <!-- kapsam  -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ListView
+                android:id="@+id/lv_kapsamlar"
+                android:layout_width="380dp"
+                android:layout_height="200dp"
+                android:background="@drawable/form_item"
+                android:dropDownVerticalOffset="0dp"
+                android:choiceMode="singleChoice"
+                android:popupBackground="@drawable/popup"
+                />
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="22dp"
+                android:layout_alignEnd="@id/lv_kapsamlar"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="26dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/ic_spinner"
+                android:layout_alignRight="@id/lv_kapsamlar" />
+
+        </RelativeLayout>
+        <!-- topluluk  -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <ListView
+                android:id="@+id/lv_topluluklar"
+                android:layout_width="380dp"
+                android:layout_height="200dp"
+                android:background="@drawable/form_item"
+                android:dropDownVerticalOffset="0dp"
+                android:choiceMode="multipleChoice"
+                android:popupBackground="@drawable/popup"
+                android:spinnerMode="dropdown"  />
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="22dp"
+                android:layout_alignEnd="@id/lv_topluluklar"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="26dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/ic_spinner"
+                android:layout_alignRight="@id/lv_topluluklar" />
+
+        </RelativeLayout>
+        <!-- etkinlik adi  -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <EditText
+                android:layout_width="380dp"
+                android:layout_height="40dp"
+                android:id="@+id/et_etkinlik_adi"
+                android:background="@drawable/form_item"
+                android:hint="@string/etkinlik_ad"
+                android:textColorHint="@color/textColor"
+                android:textColor="@color/textColor"
+                android:text="@{bindingGuncellemeForm.etkinlik.etkinlik_adi}"
+                android:textSize="@dimen/subtitle_size"
+                android:fontFamily="@font/regular"
+                android:paddingLeft="@dimen/text_margin"
+                android:paddingTop="9dp"
+                android:paddingBottom="8dp" />
+
+        </RelativeLayout>
+        <!-- adres kısmı  -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="42dp"
+                >
+
+                <ListView
+                    android:id="@+id/lvIlceler"
+                    android:layout_width="169.5dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/form_item_medium"
+                    android:dropDownVerticalOffset="0dp"
+                    android:choiceMode="singleChoice"
+                    android:popupBackground="@drawable/popup"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="21dp"
+                    android:layout_height="22dp"
+                    android:layout_alignEnd="@id/lvIlceler"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="26dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/ic_spinner"
+                    android:layout_alignRight="@id/lvIlceler" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ListView
+                    android:id="@+id/lv_semtler"
+                    android:layout_width="169.5dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/form_item_medium"
+                    android:dropDownVerticalOffset="0dp"
+                    android:choiceMode="singleChoice"
+                    android:popupBackground="@drawable/popup"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="21dp"
+                    android:layout_height="22dp"
+                    android:layout_alignEnd="@id/lv_semtler"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="26dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/ic_spinner"
+                    android:layout_alignRight="@id/lv_semtler" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <!-- acik adres -->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <EditText
+                android:layout_width="380dp"
+                android:layout_height="40dp"
+                android:background="@drawable/form_item"
+                android:hint="Açık Adres"
+                android:text="@{bindingGuncellemeForm.acikAdres}"
+                android:id="@+id/et_acik_adres"
+                android:textColorHint="@color/textColor"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/subtitle_size"
+                android:fontFamily="@font/regular"
+                android:paddingLeft="@dimen/text_margin"
+                android:paddingTop="9dp"
+                android:paddingBottom="8dp" />
+        </RelativeLayout>
+
+        <!-- aciklama -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <EditText
+                android:layout_width="380dp"
+                android:id="@+id/et_aciklama"
+                android:layout_height="40dp"
+                android:background="@drawable/form_item"
+                android:hint="Açıklama"
+                android:textColorHint="@color/textColor"
+                android:textColor="@color/textColor"
+                android:text = "@{bindingGuncellemeForm.etkinlik.aciklama}"
+                android:textSize="@dimen/subtitle_size"
+                android:fontFamily="@font/regular"
+                android:paddingLeft="@dimen/text_margin"
+                android:paddingTop="9dp"
+                android:paddingBottom="8dp" />
+        </RelativeLayout>
+        <!-- ucret -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <EditText
+                android:layout_width="380dp"
+                android:layout_height="40dp"
+                android:background="@drawable/form_item"
+                android:hint="Ücret"
+                android:text="@{bindingGuncellemeForm.etkinlik.ucret.toString()}"
+                android:id="@+id/et_ucret"
+                android:textColorHint="@color/textColor"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/subtitle_size"
+                android:fontFamily="@font/regular"
+                android:paddingLeft="@dimen/text_margin"
+                android:paddingTop="9dp"
+                android:paddingBottom="8dp" />
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gondermek"
+            android:text="GONDERR"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="secilenleri goster"
+            android:id="@+id/gosteTr"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="basaaaakkkbeyyzaaa"
+            android:background="@color/colorPrimary"
+            android:id="@+id/liste"/>
+        <!-- iletisim adresleri -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+
+            <EditText
+                android:layout_width="325dp"
+                android:layout_height="40dp"
+                android:hint="İletişim Adresleri"
+                android:id="@+id/etIletisimAdresleri"
+                android:background="@drawable/form_item"
+                android:textColorHint="@color/textColor"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/subtitle_size"
+                android:fontFamily="@font/regular"
+                android:paddingLeft="@dimen/text_margin"
+                android:paddingTop="9dp"
+                android:paddingBottom="8dp" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/icIletisimArti"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ic_arti"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rootIiletisimLayout"
+                android:orientation="vertical"/>
+
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <EditText
+                android:layout_width="380dp"
+                android:layout_height="40dp"
+                android:hint="Etkinlik Tarihi"
+                android:text="@{bindingGuncellemeForm.etkinlik.etkinlik_tarihi}"
+                android:id="@+id/et_tarih"
+                android:inputType="date"
+                android:background="@drawable/form_item"
+                android:textColorHint="@color/textColor"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/subtitle_size"
+                android:fontFamily="@font/regular"
+                android:paddingLeft="@dimen/text_margin"
+                android:paddingTop="9dp"
+                android:paddingBottom="8dp" />
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="380dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/btn_yayinlaa"
+            android:textColor="@color/toolbarTitleText"
+            android:textSize="@dimen/text_mediumsize"
+            android:fontFamily="@font/semibold"
+            android:text="YAYINLA"
+            android:background="@drawable/button">
+
+        </Button>
+
+
+    </LinearLayout>
+
+</layout>
+
+

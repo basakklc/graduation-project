@@ -1,0 +1,23 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="siralamaItem"
+            type="com.example.mvvmdemoproject.domain.model.Deneme"/>
+    </data>
+<CheckedTextView
+    android:id="@+id/ctv_siralama"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:textAppearance="?android:attr/textAppearanceListItem"
+    android:gravity="center_vertical"
+    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+    android:checkMarkTint="@color/colorPrimary"
+    android:background="?android:attr/listChoiceBackgroundIndicator"
+    android:paddingStart="8dip"
+    android:paddingEnd="8dip"
+    />
+
+
+    </layout>

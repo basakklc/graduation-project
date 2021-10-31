@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_guncelleme_ui"
+    app:startDestination="@id/profilEkraniFragment">
+    <fragment
+        android:id="@+id/etkinlikGuncellemeFragment"
+        android:name="com.example.mvvmdemoproject.presentation.main.view.EtkinlikGuncellemeFragment"
+        android:label="fragment_etkinlik_gunceleme"
+        tools:layout="@layout/fragment_etkinlik_gunceleme" >
+        <action
+            android:id="@+id/action_etkinlikGuncellemeFragment_to_kapsamListFragment"
+            app:destination="@id/kapsamListFragment" />
+        <action
+            android:id="@+id/action_etkinlikGuncellemeFragment_to_toplulukListFragment"
+            app:destination="@id/toplulukListFragment" />
+        <action
+            android:id="@+id/action_etkinlikGuncellemeFragment_to_ilceListFragment"
+            app:destination="@id/ilceListFragment" />
+        <action
+            android:id="@+id/action_etkinlikGuncellemeFragment_to_semtListFragment"
+            app:destination="@id/semtListFragment" />
+        <action
+            android:id="@+id/action_etkinlikGuncellemeFragment_to_konusmaciUpdateFragment"
+            app:destination="@id/konusmaciUpdateFragment" />
+        <action
+            android:id="@+id/action_etkinlikGuncellemeFragment_to_iletisimUpdateFragment"
+            app:destination="@id/iletisimUpdateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kapsamListFragment"
+        android:name="com.example.mvvmdemoproject.presentation.main.view.KapsamListFragment"
+        android:label="fragment_kapsam_list"
+        tools:layout="@layout/fragment_kapsam_list" >
+        <action
+            android:id="@+id/action_kapsamListFragment_to_etkinlikGuncellemeFragment"
+            app:destination="@id/etkinlikGuncellemeFragment" />
+        <action
+            android:id="@+id/action_kapsamListFragment_to_kullaniciEtkinlikEkleme"
+            app:destination="@id/kullaniciEtkinlikEkleme" />
+    </fragment>
+    <fragment
+        android:id="@+id/toplulukListFragment"
+        android:name="com.example.mvvmdemoproject.presentation.main.view.ToplulukListFragment"
+        android:label="fragment_topluluk_list"
+        tools:layout="@layout/fragment_topluluk_list" >
+
+        <argument
+            android:name="toplulukAdi"
+            app:argType="string[]"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_toplulukListFragment_to_etkinlikGuncellemeFragment"
+            app:destination="@id/etkinlikGuncellemeFragment" />
+        <action
+            android:id="@+id/action_toplulukListFragment_to_kullaniciEtkinlikEkleme"
+            app:destination="@id/kullaniciEtkinlikEkleme" />
+    </fragment>
+    <fragment
+        android:id="@+id/ilceListFragment"
+        android:name="com.example.mvvmdemoproject.presentation.main.view.IlceListFragment"
+        android:label="fragment_ilce_list"
+        tools:layout="@layout/fragment_ilce_list" >
+        <action
+            android:id="@+id/action_ilceListFragment_to_etkinlikGuncellemeFragment"
+            app:destination="@id/etkinlikGuncellemeFragment" />
+        <action
+            android:id="@+id/action_ilceListFragment_to_kullaniciEtkinlikEkleme"
+            app:destination="@id/kullaniciEtkinlikEkleme" />
+    </fragment>
+    <fragment
+        android:id="@+id/semtListFragment"
+        android:name="com.example.mvvmdemoproject.presentation.main.view.SemtListFragment"
+        android:label="fragment_semt_list"
+        tools:layout="@layout/fragment_semt_list" >
+        <action
+            android:id="@+id/action_semtListFragment_to_etkinlikGuncellemeFragment"
+            app:destination="@id/etkinlikGuncellemeFragment" />
+        <action
+            android:id="@+id/action_semtListFragment_to_kullaniciEtkinlikEkleme"
+            app:destination="@id/kullaniciEtkinlikEkleme" />
+    </fragment>
+    <fragment
+        android:id="@+id/konusmaciUpdateFragment"
+        android:name="com.example.mvvmdemoproject.presentation.main.view.KonusmaciUpdateFragment"
+        android:label="fragment_konusmaci_update"
+        tools:layout="@layout/fragment_konusmaci_update" >
+        <action
+            android:id="@+id/action_konusmaciUpdateFragment_to_konusmaciEklemeFragment"
+            app:destination="@id/konusmaciEklemeFragment" />
+        <action
+            android:id="@+id/action_konusmaciUpdateFragment_to_etkinlikGuncellemeFragment"
+            app:destination="@id/etkinlikGuncellemeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/konusmaciEklemeFragment"
+        android:name="com.example.mvvmdemoproject.presentation.main.view.KonusmaciEklemeFragment"
+        android:label="fragment_konusmaci_ekleme"
+        tools:layout="@layout/fragment_konusmaci_ekleme" >
+        <action
+            android:id="@+id/action_konusmaciEklemeFragment_to_etkinlikGuncellemeFragment"
+            app:destination="@id/etkinlikGuncellemeFragment" />
+        <action
+            android:id="@+id/action_konusmaciEklemeFragment_to_kullaniciEtkinlikEkleme"
+            app:destination="@id/kullaniciEtkinlikEkleme" />
+    </fragment>
+    <fragment
+        android:id="@+id/iletisimEklemeFragment"
+        android:name="com.example.mvvmdemoproject.presentation.main.view.IletisimEklemeFragment"
+        android:label="fragment_iletisim_ekleme"
+        tools:layout="@layout/fragment_iletisim_ekleme" >
+        <action
+            android:id="@+id/action_iletisimEklemeFragment_to_etkinlikGuncellemeFragment"
+            app:destination="@id/etkinlikGuncellemeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/iletisimUpdateFragment"
+        android:name="com.example.mvvmdemoproject.presentation.main.view.IletisimUpdateFragment"
+        android:label="fragment_iletisim_update"
+        tools:layout="@layout/fragment_iletisim_update" >
+        <action
+            android:id="@+id/action_iletisimUpdateFragment_to_iletisimEklemeFragment"
+            app:destination="@id/iletisimEklemeFragment" />
+        <action
+            android:id="@+id/action_iletisimUpdateFragment_to_etkinlikGuncellemeFragment"
+            app:destination="@id/etkinlikGuncellemeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kullaniciEtkinlikEkleme"
+        android:name="com.example.mvvmdemoproject.KullaniciEtkinlikEklemeFragment"
+        android:label="fragment_kullanici_etkinlik_ekleme"
+        tools:layout="@layout/fragment_kullanici_etkinlik_ekleme" >
+        <action
+            android:id="@+id/action_kullaniciEtkinlikEkleme_to_kapsamListFragment"
+            app:destination="@id/kapsamListFragment" />
+        <action
+            android:id="@+id/action_kullaniciEtkinlikEkleme_to_toplulukListFragment"
+            app:destination="@id/toplulukListFragment" />
+        <action
+            android:id="@+id/action_kullaniciEtkinlikEkleme_to_ilceListFragment"
+            app:destination="@id/ilceListFragment" />
+        <action
+            android:id="@+id/action_kullaniciEtkinlikEkleme_to_semtListFragment"
+            app:destination="@id/semtListFragment" />
+        <action
+            android:id="@+id/action_kullaniciEtkinlikEkleme_to_konusmaciEklemeFragment"
+            app:destination="@id/konusmaciEklemeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profilEkraniFragment"
+        android:name="com.example.mvvmdemoproject.presentation.main.view.ProfilEkraniFragment"
+        android:label="fragment_profil_ekrani"
+        tools:layout="@layout/fragment_profil_ekrani" >
+        <action
+            android:id="@+id/action_profilEkraniFragment_to_kullaniciEtkinlikIlanlar"
+            app:destination="@id/kullaniciEtkinlikIlanlari" />
+    </fragment>
+    <fragment
+        android:id="@+id/kullaniciEtkinlikIlanlari"
+        android:name="com.example.mvvmdemoproject.presentation.main.view.KullaniciEtkinlikIlanlari"
+        android:label="fragment_kullanici_etkinlik_ilanlari"
+        tools:layout="@layout/fragment_kullanici_etkinlik_ilanlari" >
+        <action
+            android:id="@+id/action_kullaniciEtkinlikIlanlari_to_kullaniciEtkinlikDetayFragment"
+            app:destination="@id/kullaniciEtkinlikDetayFragment" />
+        <action
+            android:id="@+id/action_kullaniciEtkinlikIlanlari_to_kullaniciEtkinlikEkleme"
+            app:destination="@id/kullaniciEtkinlikEkleme" />
+    </fragment>
+    <fragment
+        android:id="@+id/kullaniciEtkinlikDetayFragment"
+        android:name="com.example.mvvmdemoproject.presentation.main.view.KullaniciEtkinlikDetayFragment"
+        android:label="fragment_kullanici_etkinlik_detay"
+        tools:layout="@layout/fragment_kullanici_etkinlik_detay" >
+        <action
+            android:id="@+id/action_kullaniciEtkinlikDetayFragment_to_etkinlikGuncellemeFragment"
+            app:destination="@id/etkinlikGuncellemeFragment" />
+        <action
+            android:id="@+id/action_kullaniciEtkinlikDetayFragment_to_kullaniciEtkinlikIlanlari"
+            app:destination="@id/kullaniciEtkinlikIlanlari" />
+    </fragment>
+</navigation>

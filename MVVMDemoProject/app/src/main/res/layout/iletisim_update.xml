@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:orientation="horizontal">
+
+
+    <EditText
+        android:layout_width="145dp"
+        android:layout_height="40dp"
+        android:hint="IletisimAdresi"
+        android:id="@+id/iletisim_adres"
+        android:background="@drawable/form_item"
+        android:textColorHint="@color/textColor"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/subtitle_size"
+        android:paddingLeft="@dimen/text_margin"
+        android:paddingTop="9dp"
+        android:paddingBottom="8dp"
+        />
+
+
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ic_iletisim_sil"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/ic_sil"
+        android:layout_marginTop="7dp"/>
+
+</LinearLayout>
