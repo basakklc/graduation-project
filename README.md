@@ -1,5 +1,10 @@
 # graduation-project
 
+<video width="320" height="240" controls>
+  <source src="170401012-170401070.mov">
+</video>
+
+
 ## Proje Tanımı
 Projemiz iki ana başlık çerçevesinde geliştirilmişir. 
 + Birinci bölümde Çanakkale Onsekiz Mart Üniversitesi’nde düzenlenen topluluk etkinlikleri üzerine, 
