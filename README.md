@@ -1,9 +1,6 @@
 # graduation-project
 
-<video width="320" height="240" controls>
-  <source src="170401012-170401070.mov">
-</video>
-
+https://user-images.githubusercontent.com/34400940/139649481-6300dd02-7cd4-4a93-a291-fd73d8b98e98.mp4/
 
 ## Proje Tanımı
 Projemiz iki ana başlık çerçevesinde geliştirilmişir. 
