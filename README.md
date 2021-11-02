@@ -1,9 +1,10 @@
 # graduation-project
 
-<video width="320" height="240" controls>
-  <source src="170401012-170401070.mov">
-</video>
+#### NOT
+graduation-project repository içerisindeki ***MVVMDemoProject*** dizini -> Android tarafı kodları, ***ogrenciyasami-api*** dizini -> Laravel API tarafı kodları temsil eder.
 
+
+https://user-images.githubusercontent.com/34400940/139649481-6300dd02-7cd4-4a93-a291-fd73d8b98e98.mp4/
 
 ## Proje Tanımı
 Projemiz iki ana başlık çerçevesinde geliştirilmişir. 
@@ -80,7 +81,5 @@ Uygulamamızın baştan sona bir bütün halinde gezinme akışını sağlamak i
 
 <img src="https://user-images.githubusercontent.com/34400940/139635072-1db1341c-0deb-4833-8ee8-72ae0268ec6b.png" width="300" />
 
-# NOT
-graduation-project repository içerisindeki ***MVVMDemoProject*** dizini -> Android tarafı kodları, ***ogrenciyasami-api*** dizini -> Laravel API tarafı kodları temsil eder.
 
 
